@@ -1,8 +1,10 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white p-4 mt-8">        
-        <p>&copy; 2026 โดยสมเกียรติ ใจดี. All rights reserved.</p>
+    <footer className="footer">        
+      <div className="footer-container" >
+        <p>&copy; 2026 By Kupth Kongklai. All rights reserved.</p>
+      </div>
     </footer>
   )
 }

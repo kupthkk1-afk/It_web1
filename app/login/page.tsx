@@ -1,8 +1,23 @@
+"use client";
+
 export default function login() {
+
   return (
-    <div >
-        <h1>Please Enter Your Username And Password</h1>
-        <p>By Kupth Kongklai</p>  
+
+    <div className="auth-page" >
+      <form className="auth-card">
+        <h2>Login</h2>
+        <input
+          placeholder="Username Or Gmail"
+          type="text"
+        />
+
+        <input
+          placeholder="Password"
+          type="password"
+        />
+        <button>Login</button>
+      </form>
     </div>
   );
 }
