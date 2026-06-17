@@ -14,7 +14,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background: #d3f2ff;
+  background: #ffffff;
 }
 
 .main-content {
@@ -22,9 +22,9 @@ body {
 }
 
 .navbar {
-  background: #6ba6ff;
-  color: rgb(255, 255, 255);
-  padding: 2px 24px;
+  background: #4B5320;
+  color: #8e9c3b;
+  padding: 10px 24px;
 }
 
 .nav-container {
@@ -36,7 +36,7 @@ body {
 }
 
 .logo {
-  color: rgb(255, 0, 0);
+  color: #8e9c3b;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -57,7 +57,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #5a65ff;
+  color: #8e9c3b;
   font-weight: bold;
   font-size:  18px;
 }
@@ -139,8 +139,8 @@ body {
 }
 
 .footer {
-  background: #6ba6ff;
-  color: white;
+  background: #4B5320;
+  color: #8e9c3b;
   text-align: center;
   padding: 3px;
 } 
@@ -162,10 +162,11 @@ body {
     right: 20px;
     flex-direction: column;
     align-items: flex-start;
-    background: #1e293b;
+    background: #272727;
     padding: 18px;
     width: 230px;
     border-radius: 12px;
+    color:#ff0000;
   }
 
   .nav-links.active {

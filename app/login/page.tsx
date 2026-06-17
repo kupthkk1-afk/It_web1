@@ -8,7 +8,7 @@ export default function login() {
       <form className="auth-card">
         <h2>Login</h2>
         <input
-          placeholder="Username Or Gmail"
+          placeholder="Username Or Email"
           type="text"
         />
 
@@ -17,6 +17,7 @@ export default function login() {
           type="password"
         />
         <button>Login</button>
+        
       </form>
     </div>
   );
