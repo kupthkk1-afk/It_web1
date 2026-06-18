@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function register() {
+export default function Register() {
 
   const router = useRouter();
 
@@ -22,32 +22,36 @@ export default function register() {
     });
 
     if (res.ok) {
+      alert("𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 𝗦𝘂𝗰𝗰𝘂𝘀𝘀𝗳𝘂𝗹")
       router.push("/login");
     } else {
-      alert("Register failed");
+      alert("𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 𝗨𝗻𝘀𝘂𝗰𝗰𝘂𝘀𝘀𝗳𝘂𝗹");
     }
   }
 
-  return (
-    
 
-    <div className="auth-page" >
-      <form className="auth-card">
-        <h2>Register</h2>  
+  return (
+
+    <div className="auth-page">
+      <form className="auth-card"  onSubmit={handleSubmit}>
+        <h2> 𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 </h2>
         <input
-          placeholder="Username"
+          placeholder="𝖀𝖘𝖊𝖗𝖓𝖆𝖒𝖊"
           type="text"
-        />
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
+        />  
         <input
-          placeholder="Email"
+          placeholder="𝕰𝖒𝖆𝖎𝖑"
           type="email"
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
-          placeholder="Password"
+          placeholder="𝕻𝖆𝖘𝖘𝖜𝖔𝖗𝖉"
           type="password"
+          onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <button>Register</button>
-        </form>
+        <button>𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿</button>
+      </form>
     </div>
   );
 }

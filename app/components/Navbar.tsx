@@ -14,33 +14,33 @@ export default function Navbar() {
             </Link>
 
             <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
-                    ☰
+                    ☢︎
                 </button>
 
             <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
             <li>
-                <Link href="/">Home</Link>
+                <Link href="/">𝗛𝗼𝗺𝗲☢︎</Link>
             </li>
 
             <li>
-                <Link href="/about">About</Link>
+                <Link href="/about">𝗔𝗯𝗼𝘂𝘁☢︎</Link>
             </li>
 
             <li>
-                <Link href="/contact" >Contact</Link>
+                <Link href="/contact" >𝗖𝗼𝗻𝘁𝗮𝗰𝘁☢︎</Link>
             </li> 
 
             <li>
-                <Link href="/login">Login</Link>
+                <Link href="/login">𝗟𝗼𝗴𝗶𝗻☢︎</Link>
             </li>
 
             <li>
-                <Link href="/register">Register</Link>
+                <Link href="/register">𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿☢︎</Link>
             </li>
 
             <li>
-                <Link href="/forgotpassword">Forgot-Password</Link>
+                <Link href="/forgotpassword">𝗙𝗼𝗿𝗴𝗼𝘁-𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱☢︎</Link>
             </li>      
         </ul>
         </div>
