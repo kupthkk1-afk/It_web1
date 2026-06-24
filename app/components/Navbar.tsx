@@ -9,8 +9,8 @@ export default function Navbar() {
     <nav className="navbar">    
         <div className="nav-container">
 
-            <Link href="/" className="logo">
-                𝗖𝗼𝗺𝗯𝗮𝘁 𝗦𝘁𝗼𝗿𝗲
+            <Link href="/dashboard" className="logo">
+                𝗖𝗼𝗺𝗯𝗮𝘁 𝗦𝘁𝗼𝗿𝗲🥾
             </Link>
 
             <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
@@ -37,11 +37,7 @@ export default function Navbar() {
 
             <li>
                 <Link href="/register">𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿☢︎</Link>
-            </li>
-
-            <li>
-                <Link href="/forgotpassword">𝗙𝗼𝗿𝗴𝗼𝘁-𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱☢︎</Link>
-            </li>      
+            </li>     
         </ul>
         </div>
     </nav>
