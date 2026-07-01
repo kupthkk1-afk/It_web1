@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const exists = await User.findOne({ email });
     if (exists) {
       return NextResponse.json(
-        { message: "Email already exists" },
+        { message: "𝗘𝗺𝗮𝗶𝗹 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝗲𝘅𝗶𝘀𝘁𝘀" },
         { status: 400 }
       );
     }
@@ -26,10 +26,10 @@ export async function POST(req: Request) {
       role: "user",
     });
 
-    return NextResponse.json({ message: "Register success" });
+    return NextResponse.json({ message: "𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 𝘀𝘂𝗰𝗰𝗲𝘀𝘀" });
   } catch {
     return NextResponse.json(
-      { message: "Register failed" },
+      { message: "𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 𝗳𝗮𝗶𝗹𝗲𝗱" },
       { status: 500 }
     );
   }

@@ -27,7 +27,7 @@ export default function Login() {
       router.push("/dashboard");
       router.refresh();
     } else {
-      alert("Login failed");
+      alert("𝗟𝗼𝗴𝗶𝗻 𝗳𝗮𝗶𝗹𝗲𝗱");
     }
   }
 
@@ -38,19 +38,19 @@ export default function Login() {
       <form className="auth-card" onSubmit={handleSubmit}>
         <h2 className="font-bold"> 𝗟𝗼𝗴𝗶𝗻</h2>
         <input
-          placeholder="𝕰𝖒𝖆𝖎𝖑 𝕺𝖗 𝖀𝖘𝖊𝖗𝖓𝖆𝖒𝖊"
+          placeholder="𝗘𝗺𝗮𝗶𝗹 𝗢𝗥 𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲"
           type="email"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
-          placeholder="𝕻𝖆𝖘𝖘𝖜𝖔𝖗𝖉"
+          placeholder="𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱"
           type="password"
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
         <button>𝗟𝗢𝗚𝗜𝗡</button>
 
         <p>
-           <Link href="/forgotpassword">𝗙𝗼𝗿𝗴𝗼𝘁𝗣𝗮𝘀𝘀𝗿𝗼𝘄𝗱?</Link>
+           <Link href="/forgotpassword">𝗙𝗼𝗿𝗴𝗼𝘁 𝗣𝗮𝘀𝘀𝗿𝗼𝘄𝗱?</Link>
         </p>
 
         <p>

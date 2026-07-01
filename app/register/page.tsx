@@ -36,17 +36,17 @@ export default function Register() {
       <form className="auth-card"  onSubmit={handleSubmit}>
         <h2> 𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 </h2>
         <input
-          placeholder="𝖀𝖘𝖊𝖗𝖓𝖆𝖒𝖊"
+          placeholder="𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲"
           type="text"
           onChange={(e) => setForm({ ...form, name: e.target.value })}
         />  
         <input
-          placeholder="𝕰𝖒𝖆𝖎𝖑"
+          placeholder="𝗘𝗺𝗮𝗶𝗹"
           type="email"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
-          placeholder="𝕻𝖆𝖘𝖘𝖜𝖔𝖗𝖉"
+          placeholder="𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱"
           type="password"
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />

@@ -14,7 +14,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: #eddefc;
 }
 
 .main-content {
@@ -22,8 +22,8 @@ body {
 }
 
 .navbar {
-  background: #4B5320;
-  color: #8e9c3b;
+  background: #370E62;
+  color: #F5C300;
   padding: 10px 24px;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .logo {
-  color: #8e9c3b;
+  color: #F5C300;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -52,12 +52,12 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #F5C300;
   text-decoration: none;
 }
 
 .nav-links a:hover {
-  color: #8e9c3b;
+  color: #B6007D;
   font-weight: bold;
   font-size:  18px;
 }
@@ -139,8 +139,8 @@ body {
 }
 
 .footer {
-  background: #4B5320;
-  color: #8e9c3b;
+  background: #370E62;
+  color: #F5C300;
   text-align: center;
   padding: 3px;
 } 

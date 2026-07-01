@@ -1,45 +1,104 @@
+
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image"; 
+
+type User = {
+    name: string;
+    email: string;
+    role: "admin" | "user";
+};
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <nav className="navbar">    
-        <div className="nav-container">
+    const router = useRouter();
+    const [user, setUser] = useState<User | null>(null);
 
-            <Link href="/dashboard" className="logo">
-                𝗖𝗼𝗺𝗯𝗮𝘁 𝗦𝘁𝗼𝗿𝗲🥾
-            </Link>
+    useEffect(() => {
+        async function loadUser() {
+            const res = await fetch("/api/auth/me");
+            const data = await res.json();
+            setUser(data.user);
+        }
 
-            <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
-                    ☢︎
+        loadUser();
+    }, []);
+
+    async function logout() {
+        await fetch("/api/auth/logout", {
+            method: "POST",
+        });
+
+        setUser(null);
+        router.push("/login");
+        router.refresh();
+    }
+
+
+    return (
+        <nav className="navbar">
+            <div className="nav-container">
+
+                <Link href="/dashboard" className="logo">
+                    Air𝗦𝘁𝗼𝗿𝗲🛫
+                </Link>
+
+                <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+                    🛬
                 </button>
+                <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+                    <li>
+                        <Link href="/" >𝗛𝗼𝗺𝗲✈️</Link>
+                    </li>
 
-            <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+                    <li>
+                        <Link href="/about">𝗔𝗯𝗼𝘂𝘁✈️</Link>
+                    </li>
+                    <li>
+                        <Link href="/contact">𝗖𝗼𝗻𝘁𝗮𝗰𝘁✈️</Link>
+                    </li>
 
-            <li>
-                <Link href="/">𝗛𝗼𝗺𝗲☢︎</Link>
-            </li>
+                    {user && (
+                        <li>
+                            <Link href="/dashboard">𝗗𝗮𝘀𝗵𝗯𝗼𝗮𝗿𝗱✈️</Link>
+                        </li>
+                    )}
 
-            <li>
-                <Link href="/about">𝗔𝗯𝗼𝘂𝘁☢︎</Link>
-            </li>
+                    {user?.role === "admin" && (
+                        <li>
+                            <Link href="/admin/users">𝗔𝗱𝗺𝗶𝗻✈️</Link>
+                        </li>
+                    )}
 
-            <li>
-                <Link href="/contact" >𝗖𝗼𝗻𝘁𝗮𝗰𝘁☢︎</Link>
-            </li> 
+                    {!user ? (
+                        <>
+                            <li>
+                                <Link href="/login">𝗟𝗼𝗴𝗶𝗻✈️</Link>
+                            </li>
+                            <li>
+                                <Link href="/register"> 𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿✈️ </Link>
+                            </li>
+                        </>
+                    ) : (
+                        <>
+                            <li>
+                                <Link href="/profile"> {user.name} ({user.role}) </Link>
+                            </li>
+                            <li>
+                                <button onClick={logout} className="btn-logout">
+                                    Logout
+                                </button>
+                            </li>
+                        </>
+                    )}
 
-            <li>
-                <Link href="/login">𝗟𝗼𝗴𝗶𝗻☢︎</Link>
-            </li>
+                </ul>
 
-            <li>
-                <Link href="/register">𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿☢︎</Link>
-            </li>     
-        </ul>
-        </div>
-    </nav>
-  );
+
+            </div>
+        </nav>
+    );
 }
