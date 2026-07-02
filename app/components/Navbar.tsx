@@ -73,12 +73,6 @@ export default function Navbar() {
                         </li>
                     )}
 
-                    {user?.role === "crew" && (
-                        <li>
-                            <Link href="/crew/users">𝗖𝗿𝗲𝘄✈️</Link>
-                        </li>
-                    )}
-
                     {!user ? (
                         <>
                             <li>
