@@ -38,7 +38,7 @@ export default function Login() {
       <form className="auth-card" onSubmit={handleSubmit}>
         <h2 className="font-bold"> 𝗟𝗼𝗴𝗶𝗻</h2>
         <input
-          placeholder="𝗘𝗺𝗮𝗶𝗹 𝗢𝗥 𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲"
+          placeholder="𝗘𝗺𝗮𝗶𝗹"
           type="email"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />

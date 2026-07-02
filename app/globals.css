@@ -1,4 +1,4 @@
-
+@import "tailwindcss";
 
 * {
   box-sizing: border-box;
@@ -142,7 +142,7 @@ body {
   background: #370E62;
   color: #F5C300;
   text-align: center;
-  padding: 3px;
+  padding: 2px;
 } 
 
 .footer-container {
