@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image"; 
+import Image from "next/image";
 
 type User = {
     name: string;
@@ -43,7 +43,7 @@ export default function Navbar() {
             <div className="nav-container">
 
                 <Link href="/dashboard" className="logo">
-                    Air𝗦𝘁𝗼𝗿𝗲🛫
+                    𝐀𝐢𝐫𝐒𝐭𝐨𝐫𝐞🛫
                 </Link>
 
                 <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
@@ -68,23 +68,20 @@ export default function Navbar() {
                     )}
 
                     {user?.role === "admin" && (
-                        <div>
+                        <>
 
-                        <li>
-                            <Link href="/admin/users">𝗔𝗱𝗺𝗶𝗻✈️</Link>
-                        </li>
+                            <li>
+                                <Link href="/admin/users">𝗔𝗱𝗺𝗶𝗻✈️</Link>
+                            </li>
 
-                        <li>
-                            <Link href="/admin/categories">Category✈️</Link>
-                        </li>
-                        <li>
-                            <Link href="/admin/products">Product✈️</Link>
-                        </li>
+                            <li>
+                                <Link href="/admin/categories">𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝘆✈️</Link>
+                            </li>
+                            <li>
+                                <Link href="/admin/products">𝗣𝗿𝗼𝗱𝘂𝗰𝘁✈️</Link>
+                            </li>
+                        </>
 
-                        
-
-                        </div>
-                        
                     )}
 
                     {!user ? (
