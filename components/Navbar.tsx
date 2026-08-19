@@ -71,7 +71,7 @@ export default function Navbar() {
                         <>
 
                             <li>
-                                <Link href="/admin/users">𝗔𝗱𝗺𝗶𝗻✈️</Link>
+                                <Link href="/admin/blogs">𝗕𝗹𝗼𝗴✈️</Link>
                             </li>
 
                             <li>
