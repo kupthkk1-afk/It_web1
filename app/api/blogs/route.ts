@@ -50,7 +50,7 @@ export async function POST(request: Request) {
     if (existingBlog                        ) {
       return NextResponse.json(
         { message: "Name or Slug is already exitsing" },
-        { status: 409 }
+        { status: 409 }  
       );
     }
 

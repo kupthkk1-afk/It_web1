@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 export default function BlogForm() {
     const [title, setTitle] = useState("");
     const [slug, setSlug] = useState("");
-    const [Content, setContent] = useState("");
+    const [content, setContent] = useState("");
     const [message, setMessage] = useState("");
     const [submitting, setSubmitting] = useState(false);
 
@@ -29,7 +29,7 @@ export default function BlogForm() {
             setSubmitting(true);
             setMessage("");
 
-            const response = await fetch("/api/categories", {
+            const response = await fetch("/api/blogs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -94,7 +94,7 @@ export default function BlogForm() {
 
                     <label> 𝗖𝗼𝗻𝘁𝗲𝗻𝘁 </label>
                     <textarea
-                        value={Content}
+                        value={content}
                         onChange={(event) =>
                         setContent(event.target.value)
                         }
